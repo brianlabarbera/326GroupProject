@@ -50,43 +50,44 @@ void QuickSort::quickSortN(vector<int>& a, int low, int high, long long int& n) 
 
 
 int QuickSort::partition(vector<int>& a, int low, int high) {
-    int pivot = a[high];  // Choose the rightmost element as pivot
+    int pivot = a.at(high);  // Choose the rightmost element as pivot
     int i = low - 1;      // Index of smaller element
 
     for (int j = low; j < high; j++) {
         // If current element is smaller than or equal to pivot
-        if (a[j] <= pivot) {
+        if (a.at(j) <= pivot) {
             i++;  // Increment index of smaller element
-            swap(a[i], a[j]);  // Swap current element with the element at the smaller index
+            swap(a.at(i), a.at(j));  // Swap current element with the element at the smaller index
         }
     }
 
-    swap(a[i + 1], a[high]);  // Swap pivot with the element at the smaller index + 1
+    swap(a.at(i + 1), a.at(high));  // Swap pivot with the element at the smaller index + 1
     return i + 1;             // Return the partitioning index
 }
 
 int QuickSort::partitionN(vector<int>& a, int low, int high, long long int& n) {
-    int pivot = a[high];
+    int pivot = a.at(high);
     n++;
     // Choose the rightmost element as pivot
     int i = low - 1;
     n++;
     // Index of smaller element
 
-    for (int j = low; j < high; j++) {
+    for (int j = low; j < high; j++, n++, n++) {
         // If current element is smaller than or equal to pivot
-        if (a[j] <= pivot) {
+        if (a.at(j) <= pivot) {
             i++;
             n++;
             // Increment index of smaller element
-            swapN(a[i], a[j], n);
+            swapN(a.at(i), a.at(j), n);
             // Swap current element with the element at the smaller index
 
 
         }
+
     }
 
-    swapN(a[i + 1], a[high], n);
+    swapN(a.at(i + 1), a.at(high), n);
     // Swap pivot with the element at the smaller index + 1
     return i + 1;
     // Return the partitioning index
@@ -111,7 +112,6 @@ void QuickSort::swapN(int& a, int& b, long long int& n) {
     b = temp;
     n++;
 }
-
 
 
 
