@@ -84,13 +84,13 @@ int QuickSort::partitionN(vector<int>& a, int low, int high, long long int& n) {
 
 
         }
-
-        swapN(a[i + 1], a[high], n);
-        // Swap pivot with the element at the smaller index + 1
-        return i + 1;
-        // Return the partitioning index
-        n++;
     }
+
+    swapN(a[i + 1], a[high], n);
+    // Swap pivot with the element at the smaller index + 1
+    return i + 1;
+    // Return the partitioning index
+    n++;
 
     n++;
     n++;
@@ -111,6 +111,8 @@ void QuickSort::swapN(int& a, int& b, long long int& n) {
     b = temp;
     n++;
 }
+
+
 
 
 
