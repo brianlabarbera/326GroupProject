@@ -13,13 +13,12 @@ public:
     static string GetAlgoName() { return NAME; };
 private:
     static const string NAME;
-    void quickSort(vector<int>& a, int low, int high);
-    void quickSortN(vector<int>& a, int low, int high, long long int& n);
-    int partition(vector<int>& a, int low, int high);
-    int partitionN(vector<int>& a, int low, int high, long long int& n);
-    void swap(int& a, int& b);
-    void swapN(int& a, int& b, long long int& n);
+    static void quickSort(vector<int>& a, int low, int high);
+    static void quickSortN(vector<int>& a, int low, int high, long long int& n);
+    static int partition(vector<int>& a, int low, int high);
+    static int partitionN(vector<int>& a, int low, int high, long long int& n);
+    static void swap(int& a, int& b);
+    static void swapN(int& a, int& b, long long int& n);
 };
 
 #endif
-
