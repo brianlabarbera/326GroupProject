@@ -1,0 +1,17 @@
+﻿  SortingAlgoDriver.cpp
+  DataSetGenerator.cpp
+C:\Users\brian\Desktop\Projects\326GroupProject\326GroupProject\DataSetGenerator.cpp(14,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\brian\Desktop\Projects\326GroupProject\326GroupProject\DataSetGenerator.cpp(22,23): warning C4244: 'initializing': conversion from '_Rep' to 'unsigned int', possible loss of data
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+C:\Users\brian\Desktop\Projects\326GroupProject\326GroupProject\DataSetGenerator.cpp(25,38): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\brian\Desktop\Projects\326GroupProject\326GroupProject\DataSetGenerator.cpp(34,23): warning C4244: 'initializing': conversion from '_Rep' to 'unsigned int', possible loss of data
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+C:\Users\brian\Desktop\Projects\326GroupProject\326GroupProject\DataSetGenerator.cpp(54,33): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  326GroupProject.vcxproj -> C:\Users\brian\Desktop\Projects\326GroupProject\x64\Debug\326GroupProject.exe
