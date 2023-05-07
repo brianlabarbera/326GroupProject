@@ -17,6 +17,9 @@ void QuickSort::SortAlgo(vector<int>& arr, long long int& n) {
         Algo.quickSortN(arr, 0, arr.size() - 1, n);
 
     }
+    
+    n++;
+
 }
 
 void QuickSort::quickSort(vector<int>& a, int low, int high) {
@@ -36,12 +39,13 @@ void QuickSort::quickSortN(vector<int>& a, int low, int high, long long int& n) 
 
         // Recursive calls to sort the sub-arrays
         quickSortN(a, low, pi - 1, n);
-        n++;
         // Elements before partition
         quickSortN(a, pi + 1, high, n);
-        n++;
         // Elements after partition
     }
+
+    n++;
+
 }
 
 
@@ -72,21 +76,24 @@ int QuickSort::partitionN(vector<int>& a, int low, int high, long long int& n) {
     for (int j = low; j < high; j++) {
         // If current element is smaller than or equal to pivot
         if (a[j] <= pivot) {
-            i++;  // Increment index of smaller element
-            swapN(a[i], a[j], n);
+            i++;
             n++;
+            // Increment index of smaller element
+            swapN(a[i], a[j], n);
             // Swap current element with the element at the smaller index
 
 
         }
 
         swapN(a[i + 1], a[high], n);
-        n++;
         // Swap pivot with the element at the smaller index + 1
         return i + 1;
-        n++;
         // Return the partitioning index
     }
+
+    n++;
+    n++;
+    n++;
 
 }
 
@@ -104,4 +111,5 @@ void QuickSort::swapN(int& a, int& b, long long int& n) {
     b = temp;
     n++;
 }
+
 
