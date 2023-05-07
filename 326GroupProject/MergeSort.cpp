@@ -68,9 +68,9 @@ void MergeSort::merge(vector<int>& arr, int left, int mid, int right) {
 
     // Copy data to temporary subarrays
     for (int i = 0; i < n1; i++)
-        L[i] = arr[left + i];
+        L.at(i) = arr.at(left + i);
     for (int j = 0; j < n2; j++)
-        R[j] = arr[mid + 1 + j];
+        R.at(j) = arr.at(mid + 1 + j);
 
     // Merge the temporary subarrays back into arr
     int i = 0;     // Initial index of left subarray
@@ -78,12 +78,12 @@ void MergeSort::merge(vector<int>& arr, int left, int mid, int right) {
     int k = left;  // Initial index of merged subarray
 
     while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
-            arr[k] = L[i];
+        if (L.at(i) <= R.at(j)) {
+            arr.at(k) = L.at(i);
             i++;
         }
         else {
-            arr[k] = R[j];
+            arr.at(k) = R.at(j);
             j++;
         }
         k++;
@@ -91,14 +91,14 @@ void MergeSort::merge(vector<int>& arr, int left, int mid, int right) {
 
     // Copy the remaining elements of L[]
     while (i < n1) {
-        arr[k] = L[i];
+        arr.at(k) = L.at(i);
         i++;
         k++;
     }
 
     // Copy the remaining elements of R[]
     while (j < n2) {
-        arr[k] = R[j];
+        arr.at(k) = R.at(j);
         j++;
         k++;
     }
@@ -114,13 +114,13 @@ void MergeSort::mergeN(vector<int>& arr, int left, int mid, int right, long long
     vector<int> R(n2);
 
     // Copy data to temporary subarrays
-    for (int i = 0; i < n1; i++) {
-        L[i] = arr[left + i];
+    for (int i = 0; i < n1; i++, n++, n++) {
+        L.at(i) = arr.at(left + i);
         n++;
         n++;
     }
-    for (int j = 0; j < n2; j++) {
-        R[j] = arr[mid + 1 + j];
+    for (int j = 0; j < n2; j++, n++, n++) {
+        R.at(j) = arr.at(mid + 1 + j);
         n++;
         n++;
     }
@@ -136,14 +136,14 @@ void MergeSort::mergeN(vector<int>& arr, int left, int mid, int right, long long
     // Initial index of merged subarray
 
     while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
-            arr[k] = L[i];
+        if (L.at(i) <= R.at(j)) {
+            arr.at(k) = L.at(i);
             n++;
             i++;
             n++;
         }
         else {
-            arr[k] = R[j];
+            arr.at(k) = R.at(j);
             n++;
             j++;
             n++;
@@ -157,7 +157,7 @@ void MergeSort::mergeN(vector<int>& arr, int left, int mid, int right, long long
 
     // Copy the remaining elements of L[]
     while (i < n1) {
-        arr[k] = L[i];
+        arr.at(k) = L.at(i);
         n++;
         i++;
         n++;
@@ -169,7 +169,7 @@ void MergeSort::mergeN(vector<int>& arr, int left, int mid, int right, long long
 
     // Copy the remaining elements of R[]
     while (j < n2) {
-        arr[k] = R[j];
+        arr.at(k) = R.at(j);
         n++;
         j++;
         n++;
