@@ -49,3 +49,13 @@ void BubbleSort::SortAlgo(vector<int>* arr, long int& n)
         a = b;
         b = temp;
     }
+ 
+ void BubbleSort::swapN(int& a, int& b)
+    {
+        int temp = a;
+        n++;
+        a = b;
+        n++;
+        b = temp;
+        n++;
+    }
