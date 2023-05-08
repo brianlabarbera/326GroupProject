@@ -6,13 +6,13 @@ MergeSort Algo;
 
 void MergeSort::SortAlgo(vector<int>& arr, long long int& n) {
 
-    if (n == -1) {
+    if (n < 0) {
 
         Algo.mergeSort(arr, 0, arr.size() - 1);
 
     }
 
-    else (n >= 0); {
+    else {
 
         Algo.mergeSortN(arr, 0, arr.size() - 1, n);
 
