@@ -24,7 +24,7 @@ void QuickSort::SortAlgo(vector<int>& arr, long long int& n) {
 
 void QuickSort::quickSort(vector<int>& a, int low, int high) {
     if (low < high) {
-       long long int pi = partition(a, low, high);  // Partition the array
+       int pi = partition(a, low, high);  // Partition the array
 
         // Recursive calls to sort the sub-arrays
         quickSort(a, low, pi - 1);   // Elements before partition
@@ -34,7 +34,7 @@ void QuickSort::quickSort(vector<int>& a, int low, int high) {
 
 void QuickSort::quickSortN(vector<int>& a, int low, int high, long long int& n) {
     if (low < high) {
-       long long int pi = partitionN(a, low, high, n);  // Partition the array
+       int pi = partitionN(a, low, high, n);  // Partition the array
         n++;
 
         // Recursive calls to sort the sub-arrays
@@ -50,8 +50,8 @@ void QuickSort::quickSortN(vector<int>& a, int low, int high, long long int& n) 
 
 
 int QuickSort::partition(vector<int>& a, int low, int high) {
-    long long int pivot = a.at(high);  // Choose the rightmost element as pivot
-   long long int i = low - 1;      // Index of smaller element
+    int pivot = a.at(high);  // Choose the rightmost element as pivot
+   int i = low - 1;      // Index of smaller element
 
     for (int j = low; j < high; j++) {
         // If current element is smaller than or equal to pivot
@@ -66,10 +66,10 @@ int QuickSort::partition(vector<int>& a, int low, int high) {
 }
 
 int QuickSort::partitionN(vector<int>& a, int low, int high, long long int& n) {
-   long long int pivot = a.at(high);
+   int pivot = a.at(high);
     n++;
     // Choose the rightmost element as pivot
-    long long int i = low - 1;
+    int i = low - 1;
     n++;
     // Index of smaller element
 
@@ -99,13 +99,13 @@ int QuickSort::partitionN(vector<int>& a, int low, int high, long long int& n) {
 }
 
 void QuickSort::swap(int& a, int& b) {
-    long long int temp = a;
+    int temp = a;
     a = b;
     b = temp;
 }
 
 void QuickSort::swapN(int& a, int& b, long long int& n) {
-   long long int temp = a;
+   int temp = a;
     n++;
     a = b;
     n++;
