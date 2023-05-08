@@ -6,7 +6,7 @@ QuickSort Algo;
 
 void QuickSort::SortAlgo(vector<int>& arr, long long int& n) {
 
-    if (n == -1) {
+    if (n < 0) {
 
         Algo.quickSort(arr, 0, arr.size() - 1);
 
