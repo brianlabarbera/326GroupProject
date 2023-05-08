@@ -12,7 +12,7 @@ void QuickSort::SortAlgo(vector<int>& arr, long long int& n) {
 
     }
 
-    else (n >= 0); {
+    else {
 
         Algo.quickSortN(arr, 0, arr.size() - 1, n);
 
@@ -69,7 +69,7 @@ int QuickSort::partitionN(vector<int>& a, int low, int high, long long int& n) {
    long long int pivot = a.at(high);
     n++;
     // Choose the rightmost element as pivot
-    int i = low - 1;
+    long long int i = low - 1;
     n++;
     // Index of smaller element
 
