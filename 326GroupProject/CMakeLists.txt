@@ -19,6 +19,9 @@ set(SOURCE_FILES
         src/SortingAlgoDriver.h src/SortingAlgoDriver.cpp
         src/ImprovedBubbleSort.h src/ImprovedBubbleSort.cpp
         src/MergeSort.h src/MergeSort.cpp
-        src/QuickSort.h src/QuickSort.cpp)
+        src/QuickSort.h src/QuickSort.cpp
+        src/BubbleSort.h src/BubbleSort.cpp
+        src/InsertionSort.h src/InsertionSort.cpp
+        src/SelectionSort.h src/SelectionSort.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
