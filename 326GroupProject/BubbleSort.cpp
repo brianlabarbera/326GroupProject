@@ -32,7 +32,7 @@ void BubbleSort::SortAlgo(vector<int>* arr, long int& n)
                     n++;
                     if (arr.at(j) > arr.at(j + 1))
                     {
-                        swap(arr.at(j), arr.at(j + 1));
+                        swapN(arr.at(j), arr.at(j + 1));
                     }
                     n++;
                 }
